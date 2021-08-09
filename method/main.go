@@ -1,10 +1,13 @@
 package main
 
-import "gomethod/examples"
+import (
+	"gomethod/examples"
+)
 
 func main() {
-	// examples.Ex19_1()
+	examples.Ex19_1()
 	// examples.Ex19_2()
 	// examples.Ex19_3()
-	examples.Ex19_4()
+	// examples.Exercise_01()
+	// examples.ex
 }

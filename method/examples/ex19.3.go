@@ -10,17 +10,17 @@ type account2 struct {
 
 // 포인터 메서드
 func (a1 *account2) withdrawPointer(amount int) {
-	a1.balance -= amount
+	a1.balance = a1.balance - amount
 }
 
 // 값 타입 메서드
 func (a2 account2) withdrawValue(amount int) {
-	a2.balance -= amount
+	a2.balance = a2.balance - amount
 }
 
 // 변경된 값을 반환하는 값 타입 메서드
 func (a3 account2) withdrawReturnValue(amount int) account2 {
-	a3.balance -= amount
+	a3.balance = a3.balance - amount
 	return a3
 }
 
@@ -37,4 +37,12 @@ func Ex19_3() {
 
 	mainB.withdrawPointer(30)
 	fmt.Println(mainB.balance)
+
+	var mainC *account2 = &account2{100, "Joe", "Park"}
+	fmt.Println(&mainC)
+	fmt.Println(&mainC.firstName)
+
+	var mainD account2 = account2{100, "Joe", "Park"}
+	fmt.Println(&mainD)
+	fmt.Println(&mainD.firstName)
 }

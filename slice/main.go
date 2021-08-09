@@ -1,14 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"goslice/examples"
+)
 
 func main() {
-	var slice []int
-
-	if len(slice) == 0 {
-		fmt.Println("slice is empty", slice)
-	}
-
-	slice[1] = 10
-	fmt.Println(slice)
+	// examples.Ex18_1()
+	// examples.VariablesMethods()
+	// examples.Ex18_2()
+	examples.Ex18_4()
 }
