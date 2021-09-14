@@ -10,5 +10,7 @@ func main() {
 
 	//channel.Sample01()
 	//channel.Ex25_01()
-	channel.Ex25_03()
+	// channel.Ex25_03()
+	// channel.Ex25_5()
+	channel.Ex25_6()
 }
