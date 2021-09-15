@@ -9,7 +9,7 @@ import (
 func square4(wg *sync.WaitGroup, ch chan int) {
 
 	tick := time.Tick(time.Second)
-	terminate := time.After(time.Second * 10000)
+	terminate := time.After(time.Second * 100)
 
 	for {
 		select {
@@ -35,7 +35,7 @@ func Ex25_6() {
 	wg.Add(1)
 	go square4(&wg, ch)
 
-	for i := 0; i < 10000; i++ {
+	for i := 0; i < 100; i++ {
 		ch <- i
 	}
 	wg.Wait()

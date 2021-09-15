@@ -12,5 +12,6 @@ func main() {
 	//channel.Ex25_01()
 	// channel.Ex25_03()
 	// channel.Ex25_5()
-	channel.Ex25_6()
+	// channel.Ex25_6()
+	channel.Ex25_7()
 }
