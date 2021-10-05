@@ -66,12 +66,12 @@ func PrintAllFiles(files []string, word string) {
 }
 
 func findWordInFile(filename string, word string, ch chan FindInfo) {
-	findInfo := FindInfo{filename, []LineInfo{}}
+	findInfos := FindInfo{filename, []LineInfo{}}
 
 	file, err := os.Open(filename)
 	if err != nil {
 		fmt.Println("파일을 찾을 수 없습니다.", filename)
-		ch <- findInfo
+		ch <- findInfos
 	}
 	defer file.Close()
 
@@ -80,9 +80,9 @@ func findWordInFile(filename string, word string, ch chan FindInfo) {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.Contains(line, word) {
-			findInfo.lines = append(findInfo.lines, LineInfo{lineNo, line})
+			findInfos.lines = append(findInfos.lines, LineInfo{lineNo, line})
 		}
 		lineNo++
 	}
-	ch <- findInfo
+	ch <- findInfos
 }
