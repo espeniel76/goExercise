@@ -9,6 +9,7 @@ func main() {
 	// examples.VariablesMethods()
 	// examples.Ex18_2()
 	// examples.Ex18_4()
-	examples.Ex18_5()
-	examples.Ex18_6()
+	// examples.Ex18_5()
+	// examples.Ex18_6()
+	examples.Test()
 }
