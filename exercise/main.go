@@ -1,11 +1,10 @@
 package main
 
-import (
-	"exercise/examtest"
-)
+import "exercise/sorttest"
 
 func main() {
 	// examtest.Ex1()
 	// examtest.Ex2()
-	examtest.Ex3()
+	// examtest.Ex3()
+	sorttest.Ex1()
 }
